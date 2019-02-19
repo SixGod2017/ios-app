@@ -52,7 +52,7 @@ class BiometricalTests: XCTestCase {
 
     func testBiometricalFailedAuthentication() {
 
-        // Prepare the simulator show the passcode
+		// Prepare the simulator show the passcode
         AppLockManager.shared.passcode = "1111"
         AppLockManager.shared.lockEnabled = true
         AppLockManager.shared.biometricalSecurityEnabled = true

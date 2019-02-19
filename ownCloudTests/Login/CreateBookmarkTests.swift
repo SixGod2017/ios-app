@@ -43,7 +43,7 @@ class CreateBookmarkTests: XCTestCase {
      */
     func testCheckInitialViewAuth () {
 
-        //Actions
+		//Actions
         EarlGrey.select(elementWithMatcher: grey_accessibilityID("addServer")).perform(grey_tap())
 
         //Assert
@@ -59,7 +59,7 @@ class CreateBookmarkTests: XCTestCase {
      */
     func testCheckURLEmptyBasicAuth () {
 
-        //Actions
+		//Actions
         EarlGrey.select(elementWithMatcher: grey_accessibilityID("addServer")).perform(grey_tap())
 
         //Assert
@@ -74,7 +74,7 @@ class CreateBookmarkTests: XCTestCase {
      */
     func testCheckURLBasicAuthInformalIssue () {
 
-        let mockUrlServer = "http://mocked.owncloud.server.com"
+		let mockUrlServer = "http://mocked.owncloud.server.com"
         let authMethods: [OCAuthenticationMethodIdentifier] = [OCAuthenticationMethodIdentifier.basicAuth,
                                                                OCAuthenticationMethodIdentifier.oAuth2]
         let issue: OCIssue = OCIssue(forError: NSError(domain: "mocked.owncloud.server.com", code: 1033, userInfo: [NSLocalizedDescriptionKey: "Informal issue description"]), level: .informal, issueHandler: nil)
@@ -110,7 +110,7 @@ class CreateBookmarkTests: XCTestCase {
      */
     func testCheckURLBasicAuthWarningIssueView () {
 
-        let mockUrlServer = "http://mocked.owncloud.server.com"
+		let mockUrlServer = "http://mocked.owncloud.server.com"
         let authMethods: [OCAuthenticationMethodIdentifier] = [OCAuthenticationMethodIdentifier.basicAuth,
                                                                OCAuthenticationMethodIdentifier.oAuth2]
         let issue: OCIssue = OCIssue(forError: NSError(domain: "mocked.owncloud.server.com", code: 1033, userInfo: [NSLocalizedDescriptionKey: "Warning issue description"]), level: .warning, issueHandler: nil)
@@ -203,7 +203,7 @@ class CreateBookmarkTests: XCTestCase {
      */
     func testCheckURLBasicAuthErrorIssue () {
 
-        let mockUrlServer = "http://mocked.owncloud.server.com"
+		let mockUrlServer = "http://mocked.owncloud.server.com"
 		let authMethods: [OCAuthenticationMethodIdentifier] = [OCAuthenticationMethodIdentifier.basicAuth,
 															   OCAuthenticationMethodIdentifier.oAuth2]
         let issue: OCIssue = OCIssue(forError: NSError(domain: "mocked.owncloud.server.com", code: 1033, userInfo: [NSLocalizedDescriptionKey: "Error issue description"]), level: .error, issueHandler: nil)
@@ -386,7 +386,7 @@ class CreateBookmarkTests: XCTestCase {
      */
     func testCheckURLOAuth2 () {
 
-        let mockUrlServer = "http://mocked.owncloud.server.com"
+		let mockUrlServer = "http://mocked.owncloud.server.com"
 		let authMethods: [OCAuthenticationMethodIdentifier] = [OCAuthenticationMethodIdentifier.oAuth2,
 															   OCAuthenticationMethodIdentifier.basicAuth]
         let issue: OCIssue = OCIssue(forError: NSError(domain: "mocked.owncloud.server.com", code: 1033, userInfo: [NSLocalizedDescriptionKey: "Error description"]), level: .warning, issueHandler: nil)
@@ -474,7 +474,7 @@ class CreateBookmarkTests: XCTestCase {
      */
     func testLoginBasicAuthRightCredentials () {
 
-        let mockUrlServer = "http://mocked.owncloud.server.com"
+		let mockUrlServer = "http://mocked.owncloud.server.com"
         let userName = "test"
         let password = "test"
 		let authMethods: [OCAuthenticationMethodIdentifier] = [OCAuthenticationMethodIdentifier.basicAuth,
